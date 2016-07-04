@@ -408,3 +408,4 @@ Device.create(name: 'Galaxy', model: 'Note 3', network: 'Sprint', size: 32, imag
 Device.create(name: 'Galaxy', model: 'Note 3', network: 'T-Mobile', size: 32, image: '')
 Device.create(name: 'Galaxy', model: 'Note 3', network: 'Verizon', size: 32, image: '')
 Device.create(name: 'Galaxy', model: 'Note 3', network: 'Other', size: 32, image: '')
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

@@ -1,23 +1,36 @@
 class Api::V1::OfferingsController < ApplicationController
+	respond_to :json
 
 	def index
-		render json: Offerings.all
+		respond_with Offering.all
 	end
 
 	def show
-		render json: offering
+		respond_with Offering.find(params[:id])
 	end
 
 	def create
-		render json: Offering.create(offering_params)
+		offering = Offering.new(offering_params)
+		if offering.save
+			render json: offering, status: 201, location: [:api, offering]
+		else
+			render json: { errors: offering.errors }, status: 422
+		end
 	end
 
 	def update
-		render json: offering.update(offering_params)
+		offering = Offering.find(params[:id])
+		if offering.update(offering_params)
+			render json: offering, status: 200, location: [:api, offering]
+		else
+			render json: { errors: offering.errors }, status: 422
+		end	
 	end
 
 	def destroy
-		render json: post.destroy
+		offering = Offering.find(params[:id])
+		offering.destroy
+		head 204
 	end
 
 	private

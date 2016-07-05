@@ -1,4 +1,5 @@
 class Api::V1::DevicesController < ApplicationController
+	before_filter: authenticate_user!
 	respond_to :json
 
 	def index
@@ -28,7 +29,7 @@ class Api::V1::DevicesController < ApplicationController
 	end
 
 	def destroy
-		device = Product.find(params[:id])
+		device = Device.find(params[:id])
 		device.destroy
 		head 204
 	end
@@ -39,7 +40,7 @@ class Api::V1::DevicesController < ApplicationController
 	end
 
 	def device_params
-		params.require(:device).permit(:name, :model, :network, :size, :image)
+		params.require(:device).permit(:name, :model, :network, :size, :image, :price_cents)
 	end
 
 end

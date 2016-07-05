@@ -43,7 +43,7 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-group :test do 
+group :test do
 	gem 'factory_girl_rails'
 	gem 'ffaker'
   gem 'rspec-rails'
@@ -60,3 +60,5 @@ group :development do
 end
 
 gem 'devise'
+
+gem 'money-rails', '~> 1.6', '>= 1.6.1'

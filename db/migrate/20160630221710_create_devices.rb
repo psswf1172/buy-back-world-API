@@ -6,6 +6,7 @@ class CreateDevices < ActiveRecord::Migration
       t.string :network
       t.integer :size
       t.string :image
+      t.monetize :price
     end
   end
 end

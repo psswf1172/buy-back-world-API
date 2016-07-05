@@ -52,15 +52,9 @@ ActiveRecord::Schema.define(version: 20160704222910) do
     t.string  "network"
     t.integer "size"
     t.string  "image"
+    t.integer "price_cents",    default: 0,     null: false
+    t.string  "price_currency", default: "USD", null: false
   end
-
-  create_table "offerings", force: :cascade do |t|
-    t.string  "condition"
-    t.float   "price"
-    t.integer "device_id"
-  end
-
-  add_index "offerings", ["device_id"], name: "index_offerings_on_device_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

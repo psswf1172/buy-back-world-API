@@ -9,7 +9,6 @@ Rails.application.routes.draw do
     scope module: :v1 do
       resources :users, :only => [:show, :create, :update, :destroy]
       resources :devices
-      resources :offerings
     end
   end
 end

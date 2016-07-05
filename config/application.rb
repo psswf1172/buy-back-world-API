@@ -10,12 +10,12 @@ module BuyBackWorldApi
   class Application < Rails::Application
     config.api_only = true
 
-    # config.middleware.use "Rack::Cors" do
-    #   allow do
-    #     origins '*'
-    #     resource '*', :headers => :any, :methods => [:get, :post, :delete, :put, :options]
-    #   end
-    # end
+    config.middleware.use "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :delete, :put, :options, :head]
+      end
+    end
 
     config.autoload_paths += %W(\#{config.root}/lib)
 

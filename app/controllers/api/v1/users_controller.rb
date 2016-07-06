@@ -2,7 +2,7 @@ class Api::V1::UsersController < ApplicationController
 	respond_to :json
 
   def show
-    respond_with User.find(params[:id])
+    render json: User.find(params[:id])
   end
 
   def create
@@ -33,5 +33,5 @@ class Api::V1::UsersController < ApplicationController
   def user_params
   	params.require(:user).permit(:email, :password, :password_confirmation)
   end
-  
+
 end

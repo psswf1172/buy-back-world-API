@@ -1,13 +1,12 @@
 class Api::V1::DevicesController < ApplicationController
-	before_filter: authenticate_user!
 	respond_to :json
 
 	def index
-		respond_with Device.all
+		render json: Device.all
 	end
 
 	def show
-		respond_with Device.find(params[:id])
+		render json: Device.find(params[:id])
 	end
 
 	def create

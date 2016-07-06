@@ -7,7 +7,9 @@ class CreateDevices < ActiveRecord::Migration
       t.integer :size
       t.string :image
       t.monetize :price
-      t.belongs_to :brand
+      t.integer :brand_id
     end
+
+    add_index :devices, :brand_id
   end
 end

@@ -1,3 +1,3 @@
 class DeviceSerializer < ActiveModel::Serializer
-  attributes :id, :name, :model, :network, :size, :image, :price_cents
+  attributes :id, :device_type, :device_model, :network, :size, :image, :price_cents
 end

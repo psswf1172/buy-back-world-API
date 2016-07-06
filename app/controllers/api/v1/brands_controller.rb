@@ -1,11 +1,12 @@
-class Api::V1::BrandController < ApplicationController
-  
+class Api::V1::BrandsController < ApplicationController
+  respond_to :json
+
 	def index
-		respond_with Brand.all
+		render json: Brand.all
 	end
 
 	def show
-		respond_with Brand.find(params[:id])
+		render json: Brand.find(params[:id])
 	end
 
 	def create
@@ -41,6 +42,5 @@ class Api::V1::BrandController < ApplicationController
 		params.require(:brand).permit(:brand_name)
 	end	
 
-end
 
 end

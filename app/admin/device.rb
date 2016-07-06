@@ -4,7 +4,7 @@ ActiveAdmin.register Device do
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
   permit_params do
-    params = [:name, :model, :network, :size, :image, :price_cents]
+    params = [:device_type, :model_name, :network, :size, :image, :price_cents]
   end
 
   # controller do

@@ -40,7 +40,7 @@ class Api::V1::DevicesController < ApplicationController
 	end
 
 	def device_params
-		params.require(:device).permit(:name, :model, :network, :size, :image, :price_cents)
+		params.require(:device).permit(:device_type, :model_name, :network, :size, :image, :price_cents)
 	end
 
 end

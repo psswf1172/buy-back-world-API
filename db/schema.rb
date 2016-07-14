@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 20160706173229) do
     t.string  "device_type"
     t.string  "device_model"
     t.string  "network"
+    t.string  "network_image"
     t.integer "size"
     t.string  "image"
     t.integer "price_cents",    default: 0,     null: false

@@ -64,3 +64,5 @@ gem 'devise'
 gem 'rack-cors'
 
 gem 'money-rails', '~> 1.6', '>= 1.6.1'
+
+gem 'pry'

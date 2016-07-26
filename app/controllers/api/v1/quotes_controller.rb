@@ -1,16 +1,20 @@
 require 'pry'
 class Api::V1::QuotesController < ApplicationController
-	respond_to :json
+	respond_to :json, :html, only: :create
 
+  def index
+    render json: Quote.all
+  end
 
   def create
   	@quote = Quote.new(quote_params)
   	respond_to do |format|
-      if quote.save
-        QuoteMailer.quote_waiting(@adminuser).deliver_now
-  		  render json: quote, status: 201, location: [:api, quote]
+      if @quote.save
+        QuotesMailer.quote_waiting(@quote).deliver_now
+  		  format.json {render json: @quote, status: 201, location: [:api, @quote] }
+        format.html { render(:text => "not today Satan") }
   	   else
-  		  render json: { errors: quote.errors }, status: 422
+  		  format.json {render json: @quote.errors }
       end
   	end
   end
@@ -24,7 +28,7 @@ class Api::V1::QuotesController < ApplicationController
 
   private
   def quote_params
-  	params.require(:quote).permit(:name, :phone, :device, :model, :network, :size, :condition, :price_cents)
+  	params.require(:quote).permit(:name, :phone, :device, :model, :network, :size, :price, :condition)
   end
 
 end

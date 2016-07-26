@@ -67,17 +67,14 @@ ActiveRecord::Schema.define(version: 20160706173229) do
   add_index "devices", ["brand_id"], name: "index_devices_on_brand_id"
 
   create_table "quotes", force: :cascade do |t|
-    t.string   "name"
-    t.string   "phone"
-    t.string   "device"
-    t.string   "model"
-    t.string   "network"
-    t.integer  "size"
-    t.string   "condition"
-    t.integer  "price_cents",    default: 0,     null: false
-    t.string   "price_currency", default: "USD", null: false
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.string  "name"
+    t.string  "phone"
+    t.string  "device"
+    t.string  "model"
+    t.string  "network"
+    t.string  "condition"
+    t.integer "size"
+    t.integer "price"
   end
 
 end

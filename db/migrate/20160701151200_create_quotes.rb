@@ -1,4 +1,4 @@
-class DeviseCreateQuotes < ActiveRecord::Migration
+class CreateQuotes < ActiveRecord::Migration
   
   def change
     create_table :quotes do |t|
@@ -7,11 +7,10 @@ class DeviseCreateQuotes < ActiveRecord::Migration
       t.string :device 
       t.string :model
       t.string :network
-      t.integer :size
       t.string :condition
-      t.monetize :price
+      t.integer :size
+      t.integer :price
       
-      t.timestamps null: false
     end
   end
 end

@@ -412,6 +412,6 @@ Device.create(device_type: 'Galaxy', device_model: 'Note 3', network: 'T-Mobile'
 Device.create(device_type: 'Galaxy', device_model: 'Note 3', network: 'Verizon', network_image: 'verizon-svg.png', size: 32, image: 'galaxy-note3.jpg', price_cents: 24000, brand_id: 2)
 Device.create(device_type: 'Galaxy', device_model: 'Note 3', network: 'Other', network_image: 'wireless-tower-svg.png', size: 32, image: 'galaxy-note3.jpg', price_cents: 24000, brand_id: 2)
 
-AdminUser.create!(email: 'psswf1172@yahoo.com', password: 'password', password_confirmation: 'password')
+AdminUser.create!(email: 'ethansteiner@gmail.com', password: 'password', password_confirmation: 'password')
 
-Quote.create(name: "Jen Abella", phone: "7324858930", device: 'iPhone', model: '6', network: 'ATT', size: 16, condition: 'normal', price_cents: 20000)
+Quote.create(name: "Jen Abella", phone: '7324858930', device: 'iPhone', model: '6', network: 'ATT', size: 16, price: 20000, condition: 'normal')

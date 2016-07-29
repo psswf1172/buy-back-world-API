@@ -24,6 +24,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'pg'
+
 gem 'active_model_serializers'
 
 gem 'activeadmin', github: 'activeadmin'
@@ -38,9 +40,9 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'pry'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'sqlite3'
 end
 
 group :test do
@@ -57,6 +59,10 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 gem 'devise'

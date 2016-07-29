@@ -1,9 +1,10 @@
 class QuoteMailerPreview < ActionMailer::Preview
   
-  def quote_waiting
-    QuoteMailer.quote_waiting(Quote.first)
+  def new_quote
+  	quote = Quote.last
+    QuoteMailer.new_quote(quote)
   end
 
 end
 
-# Then the preview will be available in http://localhost:3000/rails/mailers/quote_mailer/quote_waiting.
+# Then the preview will be available in http://localhost:3000/rails/mailers/quote_mailer/new_quote.

@@ -10,7 +10,7 @@ class Api::V1::QuotesController < ApplicationController
   	@quote = Quote.new(quote_params)
   	respond_to do |format|
       if @quote.save
-        QuotesMailer.quote_waiting(@quote).deliver_now
+        QuoteMailer.new_quote(@quote).deliver_now
   		  format.json {render json: @quote, status: 201, location: [:api, @quote] }
         format.html { render(:text => "not today Satan") }
   	   else

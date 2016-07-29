@@ -1,4 +1,4 @@
-require 'pry'
+
 class Api::V1::QuotesController < ApplicationController
 	respond_to :json, :html, only: :create
 

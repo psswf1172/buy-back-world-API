@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     scope module: :v1 do
       resources :brands
       resources :devices
-      resources :quotes
+      resources :quotes, defaults: { format: 'json' }
     end
   end
 end

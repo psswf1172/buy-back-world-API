@@ -8,13 +8,16 @@
     <p>
       <strong><%= @quote.name %> </strong> is waiting to hear from you at <strong><%= @quote.phone %></strong>
     </p>
-    <p>Device: <%= @quote.device%></p>
-    <p>Model: <%=@quote.model%></p>
-    <p>Network: <%= @quote.network %></p>
-    <p>Size: <%= @quote.size %> GB</p>
-    <p>Condition: <%= @quote.condition %></p>
+    <h3>Here's what they are selling:</h3>
+    <strong>
+      <p>Device: <%= @quote.device%></p>
+      <p>Model: <%=@quote.model%></p>
+      <p>Network: <%= @quote.network %></p>
+      <p>Size: <%= @quote.size %> GB</p>
+      <p>Condition: <%= @quote.condition %></p>
+    </strong>
     <br>
-    <p>The quoted price is <strong> <%=@quote.price/100%> </strong>.</p>
+    <p>The quoted price is <strong> <%= number_to_currency(@quote.price/100) %> </strong>.</p>
 
     <p>Thanks and have a great day!</p>
   </body>

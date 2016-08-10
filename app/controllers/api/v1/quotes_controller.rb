@@ -12,6 +12,7 @@ class Api::V1::QuotesController < ApplicationController
       if @quote.save
         QuoteMailer.new_quote(@quote).deliver_now
   		  format.json {render json: @quote, status: 201, location: [:api, @quote] }
+				format.html {render json: @quote, status: 201, location: [:api, @quote] }
   	   else
   		  format.json {render json: @quote.errors }
       end

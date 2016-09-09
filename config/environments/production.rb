@@ -87,6 +87,6 @@ Rails.application.configure do
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: "buybackers@gmail.com",
-    password: "123Password"
+    password: "321Password"
   }
 end

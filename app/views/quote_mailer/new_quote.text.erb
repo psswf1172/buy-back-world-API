@@ -1,7 +1,7 @@
 Great news!
 ===============================================
- 
-<%= @quote.name %> is waiting to hear from you at <%= @quote.phone %> to sell a <%= @quote.device%> <%=@quote.model%> on the <%= @quote.network %> with a memory size of <%= @quote.size%>GB and in <%= @quote.condition %>. The quoted price is <%=@quote.price%>.
 
- 
+<%= @quote.name %> is waiting to hear from you at <%= @quote.phone %> to sell a <%= @quote.device%> <%=@quote.model%> on the <%= @quote.network %> with a memory size of <%= @quote.size%>GB and in <%= @quote.condition %>. The quoted price is <%= number_to_currency(@quote.price/100) %>.
+
+
 Thanks and have a great day!

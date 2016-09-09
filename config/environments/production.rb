@@ -86,7 +86,7 @@ Rails.application.configure do
     domain: "buybackers.com",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: "buybackers@gmail.com",
-    password: "321Password"
+    user_name: ENV['GMAIL_USERNAME'],
+    password: ENV['GMAIL_PASSWORD']
   }
 end

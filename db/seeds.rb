@@ -440,7 +440,7 @@ Device.create(device_type: 'Galaxy', device_model: 'Note 3', network: 'Verizon',
 Device.create(device_type: 'Galaxy', device_model: 'Note 3', network: 'Other', network_image: 'wireless-tower-svg.png', size: 32, image: 'galaxy-note3.jpg', price_cents: 6500, brand_id: 2)
 Device.create(device_type: 'Galaxy', device_model: 'Note 3', network: 'Unlocked', network_image: 'unlocked.png', size: 32, image: 'galaxy-note3.jpg', price_cents: 6500, brand_id: 2)
 
-AdminUser.create!(email: 'ethansteiner@gmail.com', text_mail: '3478731681@vtext.com' password: 'password', password_confirmation: 'password')
-AdminUser.create!(email: 'ds@buybackcorps.com', text_mail: '	9179681335@vtext.com' password: 'buybackers', password_confirmation: 'buybackers')
+AdminUser.create!(email: 'ethansteiner@gmail.com', text_mail: '3478731681@vtext.com', password: 'password', password_confirmation: 'password')
+AdminUser.create!(email: 'ds@buybackcorps.com', text_mail: '9179681335@vtext.com', password: 'buybackers', password_confirmation: 'buybackers')
 
 Quote.create(name: "Ethan Steiner", phone: '3478731681', device: 'iPhone', model: '6', network: 'ATT', size: 16, price: 100, condition: 'normal')

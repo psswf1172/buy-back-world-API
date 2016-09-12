@@ -3,9 +3,9 @@ class QuoteMailer < ApplicationMailer
 
 	def new_quote(quote)
 		@quote = quote
-		mail(to: AdminUser.first.email,
+		mail(to: [AdminUser.last.email
 			subject: 'Quote Waiting',
-			bcc: AdminUser.first.text_mail)
+			bcc: [AdminUser.last.text_mail, AdminUser.first.email])
 	end
 
 end

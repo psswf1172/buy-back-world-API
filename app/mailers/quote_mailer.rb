@@ -5,7 +5,7 @@ class QuoteMailer < ApplicationMailer
 		@quote = quote
 		mail(to: AdminUser.first.email,
 			subject: 'Quote Waiting',
-			bcc: ["ethansteiner@gmail.com"])
+			bcc: AdminUser.first.text_mail, AdminUser.first.email)
 	end
 
 end
